@@ -1,0 +1,151 @@
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 26px;
+  padding: 16px;
+  margin: 50px 160px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-content {
+  margin: 10px;
+  border-radius: 10px;
+  position: relative;
+  background-color: #fff;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-image {
+  width: 100%;
+  display: block;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .card-image {
+  opacity: 0.5;
+}
+
+.card-text {
+  padding: 16px;
+  color: black;
+}
+
+.card-category {
+  font-size: 18px;
+  color: #888;
+}
+
+.card-title {
+  font-size: 24px;
+  margin: 8px 0;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #444;
+}
+
+.card-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .card-hover {
+  opacity: 1;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 3em;
+  background: linear-gradient(267deg,#DA7C25 0.36%, #B923E1 102.0%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .portfolio {
+    margin: 20px 30px;
+  }
+
+  .card-category {
+    font-size: 16px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-description {
+    font-size: 12px;
+  }
+
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio {
+    margin: 10px 5px;
+  }
+
+  .card-category {
+    font-size: 14px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .card-description {
+    font-size: 10px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  h2 {
+    font-size: 24px; 
+  }
+}
